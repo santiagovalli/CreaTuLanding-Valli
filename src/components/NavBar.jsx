@@ -4,9 +4,8 @@ function Navbar() {
     return(
         <nav>
 
-            <section>
+            <section className="logo">
                 <p>SmartShop</p>
-                <p> <CartWidget/> </p>
             </section>
 
             <ul>
@@ -22,6 +21,10 @@ function Navbar() {
                     <p>Smartwacht</p>
                 </li>                
             </ul>
+
+            <div className="CartContainer">
+                <p> <CartWidget/> </p>
+            </div>
         </nav>
     )
 }
