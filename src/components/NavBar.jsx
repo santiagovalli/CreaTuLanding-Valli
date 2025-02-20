@@ -1,32 +1,62 @@
-import CartWidget from "./CartWidget"
+import CartWidget from "./CartWidget";
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from "react-router";
 
-function Navbar() {
-    return(
-        <nav>
+function Navigationbar() {
+  return (
+    <Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
+      <Container fluid>
+        <Navbar.Brand as={Link} to="/">BeatuyShop</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
 
-            <section className="logo">
-                <p>SmartShop</p>
-            </section>
+            <NavDropdown title="Categories" id="navbarScrollingDropdown">
+              <NavDropdown.Item as={Link} to="/category/womens-dresses">
+                Dresses
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/womens-bags">
+                Bags
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/womens-jewellery">
+                Jewellery
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/womens-shoes">
+                Shoes
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/womens-watches">
+                Watches
+              </NavDropdown.Item>
+            </NavDropdown>
 
-            <ul>
-                <li>
-                    <p>Celulares</p>
-                </li>
+            <Nav.Link href="#pricing"> <CartWidget/>   </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
 
-                <li>
-                    <p>Tablets</p>
-                </li>
 
-                <li>
-                    <p>Smartwacht</p>
-                </li>                
-            </ul>
-
-            <div className="CartContainer">
-                <p> <CartWidget/> </p>
-            </div>
-        </nav>
-    )
+    //   <Navbar bg="dark" data-bs-theme="dark">
+    //   <Container>
+    //     <Navbar.Brand href="#home">SmartShop</Navbar.Brand>
+    //     <Nav className="me-auto">
+    //       <Nav.Link href="#home">Iphone</Nav.Link>
+    //       <Nav.Link href="#features">Oppo</Nav.Link>
+    //       <Nav.Link href="#pricing">Vivo</Nav.Link>
+    //       <Nav.Link href="#features">Realme</Nav.Link>
+    //       <Nav.Link href="#pricing">Samsumng</Nav.Link>
+    //     </Nav>
+    //     <Nav.Link href="#pricing"> <CartWidget/>   </Nav.Link>
+    //   </Container>
+    // </Navbar>
+  )
 }
 
-export default Navbar
+export default Navigationbar
