@@ -41,21 +41,6 @@ function Navigationbar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-
-
-    //   <Navbar bg="dark" data-bs-theme="dark">
-    //   <Container>
-    //     <Navbar.Brand href="#home">SmartShop</Navbar.Brand>
-    //     <Nav className="me-auto">
-    //       <Nav.Link href="#home">Iphone</Nav.Link>
-    //       <Nav.Link href="#features">Oppo</Nav.Link>
-    //       <Nav.Link href="#pricing">Vivo</Nav.Link>
-    //       <Nav.Link href="#features">Realme</Nav.Link>
-    //       <Nav.Link href="#pricing">Samsumng</Nav.Link>
-    //     </Nav>
-    //     <Nav.Link href="#pricing"> <CartWidget/>   </Nav.Link>
-    //   </Container>
-    // </Navbar>
   )
 }
 

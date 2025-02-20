@@ -1,6 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/col';
 import ListGroup from 'react-bootstrap/ListGroup';
+import ItemCount from './ItemCount';
 
 function ItemDetail ({detail}) {
     return(
@@ -17,6 +18,7 @@ function ItemDetail ({detail}) {
                         <ListGroup.Item> {detail?.stock} left</ListGroup.Item>
                         <ListGroup.Item>⭐{detail?.rating}</ListGroup.Item>
                         <ListGroup.Item>${detail?.price}</ListGroup.Item>
+                        <ListGroup.Item>  < ItemCount/>  </ListGroup.Item>
                     </ListGroup>
                 </Card.Body>
             </Card>

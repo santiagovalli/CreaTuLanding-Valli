@@ -22,8 +22,8 @@ const handleRemove = () =>{
 return(
     <div>
         <p>{count}</p>
-        <button onClick={handleRemove} >-</button>
-        <button onClick={handleAdd} >+</button>
+        <button onClick={handleRemove} >-1</button>
+        <button onClick={handleAdd} > +1 </button>
     </div>
 )
 }
