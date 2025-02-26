@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/col';
+import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router';
 
