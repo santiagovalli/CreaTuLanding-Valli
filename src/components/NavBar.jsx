@@ -6,10 +6,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router";
 
 function Navigationbar() {
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary" bg="dark" data-bs-theme="dark">
       <Container fluid>
-        <Navbar.Brand as={Link} to="/">BeatuyShop</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">SmartShop</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,24 +20,22 @@ function Navigationbar() {
           >
 
             <NavDropdown title="Categories" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/category/womens-dresses">
-                Dresses
+              <NavDropdown.Item as={Link} to="/category/phones">
+                Phones
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/womens-bags">
-                Bags
+              <NavDropdown.Item as={Link} to="/category/laptops">
+                Laptops
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/womens-jewellery">
-                Jewellery
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/womens-shoes">
-                Shoes
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/womens-watches">
+              <NavDropdown.Item as={Link} to="/category/watches ">
                 Watches
               </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/category/tablets">
+                Tablets
+              </NavDropdown.Item>
+
             </NavDropdown>
 
-            <Nav.Link href="#pricing"> <CartWidget/>   </Nav.Link>
+            <Nav.Link href="#pricing"> <CartWidget />   </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
